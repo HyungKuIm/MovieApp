@@ -1,5 +1,5 @@
 import React, {useContext, useLayoutEffect, useEffect} from 'react';
-import SplashScreen from 'react-native-splash-screen';
+// import SplashScreen from 'react-native-splash-screen';
 import {StackNavigationProp} from '@react-navigation/stack';
 import Styled from 'styled-components/native';
 
@@ -41,13 +41,13 @@ const MovieHome = ({navigation}: Props) => {
   }, []);
 
   useEffect(() => {
-    SplashScreen.hide();
+    // SplashScreen.hide();
   }, []);
 
   return (
     <Container>
       <BigCatalogList
-        url="https://yts.lt/api/v2/list_movies.json?sort_by=like_count&order_by=desc&limit=5"
+        url="https://yts.mx/api/v2/list_movies.json?sort_by=like_count&order_by=desc&limit=5"
         onPress={(id: number) => {
           navigation.navigate('MovieDetail', {
             id,
@@ -56,7 +56,7 @@ const MovieHome = ({navigation}: Props) => {
       />
       <SubCatalogList
         title="최신 등록순"
-        url="https://yts.lt/api/v2/list_movies.json?sort_by=date_added&order_by=desc&limit=10"
+        url="https://yts.mx/api/v2/list_movies.json?sort_by=date_added&order_by=desc&limit=10"
         onPress={(id: number) => {
           navigation.navigate('MovieDetail', {
             id,
@@ -65,7 +65,7 @@ const MovieHome = ({navigation}: Props) => {
       />
       <SubCatalogList
         title="평점순"
-        url="https://yts.lt/api/v2/list_movies.json?sort_by=rating&order_by=desc&limit=10"
+        url="https://yts.mx/api/v2/list_movies.json?sort_by=rating&order_by=desc&limit=10"
         onPress={(id: number) => {
           navigation.navigate('MovieDetail', {
             id,
@@ -74,7 +74,7 @@ const MovieHome = ({navigation}: Props) => {
       />
       <SubCatalogList
         title="다운로드순"
-        url="https://yts.lt/api/v2/list_movies.json?sort_by=download_count&order_by=desc&limit=10"
+        url="https://yts.mx/api/v2/list_movies.json?sort_by=download_count&order_by=desc&limit=10"
         onPress={(id: number) => {
           navigation.navigate('MovieDetail', {
             id,

@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import Styled from 'styled-components/native';
 import {Linking} from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
+// import SplashScreen from 'react-native-splash-screen';
 import {StackNavigationProp} from '@react-navigation/stack';
 
 import {UserContext} from '~/Context/User';
@@ -36,7 +36,7 @@ const Login = ({navigation}: Props) => {
   const {login} = useContext<IUserContext>(UserContext);
 
   useEffect(() => {
-    SplashScreen.hide();
+    // SplashScreen.hide();
   }, []);
 
   return (
